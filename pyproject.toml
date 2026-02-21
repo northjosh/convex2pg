@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "convex2pg"
+version = "0.1.0"
+description = "Convert Convex snapshot exports to PostgreSQL schema and data SQL files"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["convex", "postgresql", "migration", "database"]
+dependencies = []
+
+[project.scripts]
+convex2pg = "convex_to_postgres.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["convex_to_postgres"]
